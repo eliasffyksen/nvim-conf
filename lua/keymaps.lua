@@ -13,6 +13,8 @@ vim.keymap.set('n', '<leader>gf', ':FzfLua git_files<cr>', { silent = true })
 vim.keymap.set('n', '<leader>gs', ':FzfLua git_status<cr>', { silent = true })
 vim.keymap.set('n', '<leader>s', ':FzfLua live_grep<cr>', { silent = true })
 vim.keymap.set('n', '<leader>bf', ':FzfLua buffers<cr>', {})
+vim.keymap.set('n', '<leader>bd', ':bd<cr>', { noremap = true })
+vim.keymap.set('n', '<leader>x', ':w<cr>:bd<cr>', { noremap = true })
 
 vim.keymap.set("n", "<leader>ta", ":$tabnew<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { noremap = true })
@@ -24,5 +26,4 @@ vim.keymap.set("n", "<leader>tmp", ":-tabmove<CR>", { noremap = true })
 -- move current tab to next position
 vim.keymap.set("n", "<leader>tmn", ":+tabmove<CR>", { noremap = true })
 
-vim.keymap.set('n', '<leader>bd', ':bd<cr>', { noremap = true })
 
