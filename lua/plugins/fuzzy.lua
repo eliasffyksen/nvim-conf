@@ -1,9 +1,11 @@
 return {
 	'ibhagwan/fzf-lua',
 	dependencies = {'nvim-tree/nvim-web-devicons'},
-	opts = {
-		files = {
-			find_opts = [[-type f -not -path '*/\.*/*' -printf '%P\n']]
-		},
-	},
+	config = function ()
+		require('fzf-lua').setup({
+			files = {
+				fd_opts = '--color=never --type f --hidden --follow --exclude .git',
+			},
+		})
+	end
 }
