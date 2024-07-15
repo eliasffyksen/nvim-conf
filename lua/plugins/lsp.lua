@@ -27,10 +27,16 @@ return {
 				handlers = utils.lsp_handlers,
 				capabilities = utils.c,
 			})
+
+			-- Rust analyzer
+			lsp.rust_analyzer.setup({
+				['rust-analyzer'] = {},
+			})
 		end,
 		ft = {
 			-- make sure only adding configured ones here
 			"python",
+			"rust",
 		},
 	},
 }
