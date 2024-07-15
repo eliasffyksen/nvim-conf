@@ -1,3 +1,5 @@
+print('loading lsp keymaps')
+
 local M = {}
 
 local opts = { noremap = true, silent = true }

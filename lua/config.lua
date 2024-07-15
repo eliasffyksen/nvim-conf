@@ -31,3 +31,11 @@ set.fillchars =
 	[[horiz:━,horizup:┻,horizdown:┳,vert:┃,vertleft:┫,vertright:┣,verthoriz:╋,foldopen:▼,foldclose:>,fold: ]]
 
 vim.cmd([[colorscheme kanagawa-dragon]])
+
+-- Highlight trailing whitespace
+
+vim.cmd [[
+hi EoLSpace ctermbg=red guibg=red
+match EoLSpace /\s\+$/
+]]
+
